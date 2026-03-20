@@ -105,6 +105,9 @@ read_loop:
     push b
     push ebx
     call _WriteFile@20 ; print byte to cmd
+	; you can add delay here (just uncomment)
+	;push dword 200 ; 200ms delay
+	;call _Sleep@4
     jmp read_loop
 	
 ; errors
